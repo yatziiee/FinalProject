@@ -13,6 +13,7 @@
         <a-mixin id = "mySphere" material = "shader: standard; roughness: 10" geometry = "primitive: sphere; height: 1; width: 1; depth: 1"></a-mixin>
         <a-mixin id = "sphereLight" light = "type: point; intensity: 5; distance: 100"></a-mixin>
         <a-mixin id = "sphereRotation" animation = "property: rotation; to: 0 0 -360; dur: 0; easing: linear; loop: true"></a-mixin>
+        <a-mixin id = "sphereDisc" geometry = "primitive: torus; radius: 5; arc: 360; radius-tubular: .1"></a-mixin>
       </a-assets>
 
 
@@ -22,13 +23,24 @@
           <a-entity mixin = "sphereLight" light = "color: yellow"></a-entity>
         </a-entity>
         <!-- Planets -->
-        <a-entity mixin = "sphereRotation" animation = " dur: 5000"><a-entity mixin = "mySphere" material = "shader: standard; color: brown" scale = ".25 .25 .25" position = "5 0 0"></a-entity></a-entity>
-        <a-entity mixin = "sphereRotation" animation = " dur: 6000"><a-entity mixin = "mySphere" material = "shader: standard; color: yellow" scale = ".75 .75 .75" position = "10 2 0"></a-entity></a-entity>
-        <a-entity mixin = "sphereRotation" animation = " dur: 7000"><a-entity mixin = "mySphere" material = "shader: standard; color: green" scale = "1 1 1" position = "-17.5 0 0"></a-entity></a-entity>
-        <a-entity mixin = "sphereRotation" animation = " dur: 8000"><a-entity mixin = "mySphere" material = "shader: standard; color: red" scale = "1.1 1.1 1.1" position = "0 -22.5 0"></a-entity></a-entity>
-        <a-entity mixin = "sphereRotation" animation = " dur: 8000"><a-entity mixin = "mySphere" material = "shader: standard; color: #73a1b6" scale = "2.25 2.25 2.25" position = "10 25 0"></a-entity></a-entity>
-        <a-entity mixin = "sphereRotation" animation = " dur: 9000"><a-entity mixin = "mySphere" material = "shader: standard; color: #e0d09d" scale = "2.25 2.25 2.25" position = "35 5 0"></a-entity></a-entity>
-        <a-entity mixin = "sphereRotation" animation = " dur: 10000"><a-entity mixin = "mySphere" material = "shader: standard; color: #62dcf6" scale = "1.5 1.5 1.5" position = "-45 -5 0"></a-entity></a-entity>
+        <a-entity mixin = "sphereRotation" animation = " dur: 5000">
+          <a-entity mixin = "mySphere" material = "shader: standard; color: brown" scale = ".25 .25 .25" position = "5 0 0"></a-entity></a-entity>
+        <a-entity mixin = "sphereRotation" animation = " dur: 6000">
+          <a-entity mixin = "mySphere" material = "shader: standard; color: yellow" scale = ".75 .75 .75" position = "10 2 0"></a-entity></a-entity>
+        <a-entity mixin = "sphereRotation" animation = " dur: 7000">
+          <a-entity mixin = "mySphere" material = "shader: standard; color: green" scale = "1 1 1" position = "-17.5 0 0"></a-entity></a-entity>
+        <a-entity mixin = "sphereRotation" animation = " dur: 8000">
+          <a-entity mixin = "mySphere" material = "shader: standard; color: red" scale = "1.1 1.1 1.1" position = "0 -22.5 0"></a-entity></a-entity>
+        <a-entity mixin = "sphereRotation" animation = " dur: 8000">
+          <a-entity mixin = "mySphere" material = "shader: standard; color: #73a1b6" scale = "2.25 2.25 2.25" position = "10 25 0"></a-entity></a-entity>
+        <a-entity mixin = "sphereRotation" animation = " dur: 9000">
+          <a-entity mixin = "sphereDisc" material = "shader: standard; color: #e0d09d" scale = "1 1 1" position = "35 5 0" rotation = "-30 0 0"></a-entity>
+          <a-entity mixin = "sphereDisc" material = "shader: standard; color: #e0d09d" scale = ".9 .9 .9" position = "35 5 0" rotation = "-30 0 0"></a-entity>
+          <a-entity mixin = "sphereDisc" material = "shader: standard; color: #e0d09d" scale = ".8 .8 .8" position = "35 5 0" rotation = "-30 0 0"></a-entity>
+          <a-entity mixin = "mySphere" material = "shader: standard; color: #e0d09d" scale = "2.25 2.25 2.25" position = "35 5 0"></a-entity></a-entity>
+        <a-entity mixin = "sphereRotation" animation = " dur: 10000">
+          <a-entity mixin = "sphereDisc" material = "shader: standard; color: #62dcf6" scale = ".5 .5 .5" position = "-45 -5 0" rotation = "45 0 0"></a-entity>
+          <a-entity mixin = "mySphere" material = "shader: standard; color: #62dcf6" scale = "1.5 1.5 1.5" position = "-45 -5 0"></a-entity></a-entity>
         <a-entity mixin = "sphereRotation" animation = " dur: 11000"><a-entity mixin = "mySphere" material = "shader: standard; color: #335379" scale = "1.75 1.75 1.75" position = "65 0 0"></a-entity></a-entity>
       </a-entity>   
 
